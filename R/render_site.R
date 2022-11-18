@@ -275,7 +275,8 @@ site_generator <- function(input = ".", output_format = NULL) {
   # determine the index file (will be index.Rmd or index.md)
   index <- xfun::existing_files(
     file.path(root, xfun::with_ext("index", c("Rmd", "rmd"))),
-    first = TRUE, error = FALSE
+    first = TRUE
+    # , error = FALSE
   )
   if (length(index) == 0) index <- file.path(root, "index.md")
 
